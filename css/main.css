@@ -1,8 +1,9 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #dcffe6;
   margin: 0;
   padding: 0;
+  line-height: 1.4;
 }
 
 h1,
@@ -12,10 +13,11 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  color: #008147;
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 992px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -28,7 +30,7 @@ img {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  gap: 1rem;
   padding: 0;
 }
 
@@ -39,9 +41,37 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.25rem;
+  background-color: #008147;
+  padding: 1rem;
+}
+
+.main-nav ul li a:hover,.main-nav ul li a:focus {
+  background-color: #5dffa2;
+  color: #000000;
+}
+
+p{
+  max-width: 75ch;
+  word-spacing: 2px;
+}
+
+.address_heading{
+  margin-left: 2rem;
+  margin-bottom: 0;
+}
+
+.address{
+  margin-top: 0;
+  margin-left: 2rem;
+}
+form{
+  border: 1px solid rgb(125, 125, 125);
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
 form input,
@@ -50,6 +80,12 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  box-sizing: border-box;
+}
+
+form input::placeholder, form textarea::placeholder{
+  font-family: initial;
+  font-weight: lighter;
 }
 
 form textarea {
@@ -61,11 +97,30 @@ form textarea {
 
 form button {
   background: none;
-  border: 2px solid black;
+  border: 2px solid #00a05a;
   padding: 1rem;
+  color: #00a05a;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+form input:focus,
+form textarea:focus {
+  border: 1px solid #00a05a;
+}
+form button:hover, form button:focus {
+  background: #00a05a;
+  border: 2px solid #00a05a;
+  padding: 1rem;
+  color: #fff;
   text-transform: uppercase;
 }
 
 .site-footer {
   padding: 2rem 0;
+}
+
+@media screen and (min-width: 992px){
+  form{
+    width: 50%;
+  }
 }

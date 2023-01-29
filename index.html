@@ -14,54 +14,69 @@
 
 <body>
   <div class="container">
-    <div class="site-header">
+    <header role="banner" class="site-header">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+      <nav role="navigation" aria-label="Main Menu" class="main-nav" id="home">
+        <ul id="menu_list_1" role="menu">
+          <li><a role="menuitem" href="#home">Home</a></li>
+          <li><a role="menuitem" href="#welcome">Products</a></li>
+          <li><a role="menuitem" href="#owner">Reservation</a></li>
+          <li><a role="menuitem" href="#contact">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+      </nav>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="kitten image">
+    </header>
+    <main role="main" class="main-content">
+      <h2 id="welcome">Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+      <div itemscope itemtype="https://schema.org/Person" class="owner" id="owner">
+        <h2>Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li>Name: <span itemprop="name">John Doe</span></li>
+          <li>Title: <span itemprop="jobTitle">CEO</span></li>
+          <li>Email: <span itemprop="email">johnjoe@jambox.ca</span></li>
+          <li>Phone: <span itemprop="telephone">613-000-0000</span></li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <h3 class="address_heading">Address</h3>
+        <p class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">
+            Jambox Studios <br>
+            123 Guitar Road,<br>
+          </span> 
+          <span itemprop="addressLocality">
+            Musicville
+          </span>,
+          <span itemprop="addressRegion">
+            Danceistan<br>
+          </span>
+          <span itemprop="postalCode">
+            B3T 0L0
+          </span>
         </p>
       </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
+      <div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form role="form" aria-label="Send a message" action="thanks.html">
+          <label for="fullname">Full Name <em>*</em></label>
+          <input aria-required="true" aria-label="Full Name" id="fullname" type="text" placeholder="Full Name">
+
+          <label for="email">Email <em>*</em></label>
+          <input aria-required="true" aria-label="Email" id="email" type="email" placeholder="Email">
+
+          <label for="subject">Subject <em>*</em></label>
+          <input aria-required="true" aria-label="Subject" id="subject" type="text" placeholder="Subject">
+
+          <label for="message">Your Message <em>*</em></label>
+          <textarea aria-required="true" id="message" aria-label="Your Message" placeholder="Your Message"></textarea>
+
+          <button aria-label="Send inquiry to Jambox Studio" role="button" type="submit">Send</button>
         </form>
       </div>
-    </div>
-    <div class="site-footer">
+    </main>
+    <footer role="contentinfo" class="site-footer">
       &copy; 2021 Jam Box Studios
-    </div>
+    </footer>
   </div>
 </body>
 
