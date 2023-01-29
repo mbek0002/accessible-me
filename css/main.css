@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Arial', 'Roboto', Helvetica, sans-serif;
   background-color: #dcffe6;
   margin: 0;
   padding: 0;
@@ -24,6 +24,7 @@ h6 {
 
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .main-nav ul {
@@ -46,6 +47,7 @@ img {
   font-size: 1.25rem;
   background-color: #008147;
   padding: 1rem;
+  border-radius: 5px;
 }
 
 .main-nav ul li a:hover,.main-nav ul li a:focus {
@@ -67,9 +69,10 @@ p{
   margin-top: 0;
   margin-left: 2rem;
 }
+
 form{
   border: 1px solid rgb(125, 125, 125);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 1rem;
   background-color: #ffffff;
 }
@@ -101,8 +104,11 @@ form button {
   padding: 1rem;
   color: #00a05a;
   text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
 }
+
 form input:focus,
 form textarea:focus {
   border: 1px solid #00a05a;
@@ -122,5 +128,6 @@ form button:hover, form button:focus {
 @media screen and (min-width: 992px){
   form{
     width: 50%;
+    padding: 2rem;
   }
 }
