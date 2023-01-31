@@ -55,6 +55,10 @@ img {
   color: #000000;
 }
 
+.main-nav ul li a:focus {
+  outline: 2px solid black;
+}
+
 p{
   max-width: 75ch;
   word-spacing: 2px;
@@ -122,6 +126,23 @@ form button:hover, form button:focus {
 
 .site-footer {
   padding: 2rem 0;
+}
+
+.skip-links{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skip-links a{
+  position: absolute;
+  top: -4rem;
+  background-color: #00a05a;
+  color:white;
+  padding: 1rem;
+  font-weight: bold;
+}
+.skip-links a:focus{
+  top: 0;
 }
 
 @media screen and (min-width: 992px){
