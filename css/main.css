@@ -126,6 +126,18 @@ form button:hover, form button:focus {
 
 .site-footer {
   padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-footer a{
+  color: #008147;
+}
+
+.site-footer a:hover{
+  text-decoration: none;
 }
 
 .skip-links{
